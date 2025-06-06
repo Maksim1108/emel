@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Эмел Суу - натуральная минеральная вода из Кыргызстана. Высокое качество, природная чистота и полезные минералы.">
+    <meta name="keywords" content="минеральная вода, Эмел Суу, Кыргызстан, природная вода, чистая вода">
+    <meta name="author" content="Эмел Суу">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Эмел Суу - Минеральная вода из Кыргызстана">
+    <meta property="og:description" content="Натуральная минеральная вода из сердца Нарынской области">
+    <meta property="og:image" content="./assets/bottleonmountains.png">
+    <meta property="og:url" content="https://emelsuu.kg">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <link rel="apple-touch-icon" href="./assets/logo.png">
+    <title data-ru="Эмел Суу | Минеральная вода из Кыргызстана" data-ky="Эмел Суу | Кыргызстандын минералдыk суuсу">Эмел Суу - Минеральная вода из Кыргызстана</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#home">
+                        <img src="./assets/logo.png" alt="Эмел Суу" class="logo-image">
+                        <span>Эмел Суу</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#about" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</a></li>
+                        <li><a href="#source" data-ru="Источник" data-ky="Булаk">Источник</a></li>
+                        <li><a href="#benefits" data-ru="Преимущества" data-ky="Артыkчылыkтар">Преимущества</a></li>
+                        <li><a href="#quality" data-ru="Качество" data-ky="Сапат">Качество</a></li>
+                        <li><a href="#order" data-ru="Заказать" data-ky="Буйрутma">Заказать</a></li>
+                        <li><a href="#contacts" data-ru="Контакты" data-ky="Байланыш">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <a href="tel:+996772777074" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        +996 (772) 777 074
+                    </a>
+                    <div class="language-switcher">
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                        <span>/</span>
+                        <button class="lang-btn" data-lang="ky">KG</button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-ru="Эмел Суу — чистота из недр Кыргызстана" data-ky="Эмел Суу — Кыргызстандыn тереңинен тазалыk">Эмел Суу — чистота из недр Кыргызстана</h1>
+            <p class="subtitle" data-ru="Минеральная вода из сердца Нарынской области" data-ky="Нарыn облусунуn жүрөгүнөн минералдыk суu">Минеральная вода из сердца Нарынской области</p>
+            <button class="cta-button" onclick="scrollToSection('about')" data-ru="Узнать больше" data-ky="Көбүрөөк билүү">Узнать больше</button>
+        </div>
+        <div class="bottle-container">
+            <img src="./assets/bottle.png" alt="Эмел Суу" class="bottle">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</span>
+                <h2 data-ru="Природная сила в каждой капле" data-ky="Ар бир тамчыда табигый күч">Природная сила в каждой капле</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-image-wrapper animate-left">
+                        <div class="about-image">
+                            <img src="./assets/bottleonmountains.png" alt="Эмел Суу на фоне гор" class="about-bottle-image">
+                            <div class="quality-badge">
+                                <i class="fas fa-certificate"></i>
+                                <span data-ru="Высшее качество" data-ky="Жогорку сапат">Высшее качество</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-info animate-right">
+                        <div class="about-description">
+                            <p data-ru="Эмел Суу — это уникальная минеральная вода, добываемая в экологически чистом районе Нарынской области на высоте более 2000 метров над уровнем моря. Благодаря естественной фильтрации через горные породы, вода обогащается природными минералами и микроэлементами, сохраняя свою первозданную чистоту и полезные свойства." data-ky="Эмел Суu — Нарыn облуsunун экологиялыk таза аймагында, деңиз деңгээлинен 2000 метрден жогору бийиктиkте казылыp алынган уникалдуu минералдыk суu. Тоо тектери арkылуu табигый фильтрацияныn натыйжасында, суu табигый минералдар жана микроэлементтер менен байып, аныn тазалыгы жана пайдалуu касиеттери сакталат.">Эмел Суу — это уникальная минеральная вода, добываемая в экологически чистом районе Нарынской области на высоте более 2000 метров над уровнем моря. Благодаря естественной фильтрации через горные породы, вода обогащается природными минералами и микроэлементами, сохраняя свою первозданную чистоту и полезные свойства.</p>
+                        </div>
+                        <div class="mineral-composition">
+                            <h3 data-ru="Минеральный состав" data-ky="Минералдыk курамы">Минеральный состав</h3>
+                            <div class="mineral-grid">
+                                <div class="mineral-item">
+                                    <div class="mineral-icon">
+                                        <span>Ca</span>
+                                    </div>
+                                    <div class="mineral-details">
+                                        <span class="mineral-value">150-300</span>
+                                        <span class="mineral-name" data-ru="Кальций" data-ky="Кальций">Кальций</span>
+                                        <span class="mineral-unit">мг/л</span>
+                                    </div>
+                                </div>
+                                <div class="mineral-item">
+                                    <div class="mineral-icon">
+                                        <span>Mg</span>
+                                    </div>
+                                    <div class="mineral-details">
+                                        <span class="mineral-value">20-50</span>
+                                        <span class="mineral-name" data-ru="Магний" data-ky="Магний">Магний</span>
+                                        <span class="mineral-unit">мг/л</span>
+                                    </div>
+                                </div>
+                                <div class="mineral-item">
+                                    <div class="mineral-icon">
+                                        <span>Na</span>
+                                    </div>
+                                    <div class="mineral-details">
+                                        <span class="mineral-value">5-15</span>
+                                        <span class="mineral-name" data-ru="Натрий" data-ky="Натрий">Натрий</span>
+                                        <span class="mineral-unit">мг/л</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="source" class="source">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="Источник" data-ky="Булаk">Источник</span>
+                <h2 data-ru="Тысячелетняя история чистой воды" data-ky="Таза суuнуn миң жылдыk тарыхы">Тысячелетняя история чистой воды</h2>
+            </div>
+            <div class="source-content">
+                <div class="source-text">
+                    <p data-ru="Источник Эмел Суу расположен в живописной долине Нарынской области, на высоте более 2000 метров над уровнем моря. Вода проходит естественную фильтрацию через слои горных пород, обогащаясь природными минералами." data-ky="Эмел Суu булаk Нарыn облуsuнуn сүrөттүү өrөөnүндө, деңиз деңгээлинен 2000 метрден жогору бийиктиkте жайгашкан. Суu тоо тектеринин катмарлары арkылуu табигый фильтрациядан өтүп, табигый минералдар менен байыйт.">Источник Эмел Суу расположен в живописной долине Нарынской области, на высоте более 2000 метров над уровнем моря. Вода проходит естественную фильтрацию через слои горных пород, обогащаясь природными минералами.</p>
+                    <div class="source-features">
+                        <div class="source-feature">
+                            <i class="fas fa-mountain"></i>
+                            <span data-ru="2000+ м над уровнем моря" data-ky="2000+ м деңиз деңгээлинен">2000+ м над уровнем моря</span>
+                        </div>
+                        <div class="source-feature">
+                            <i class="fas fa-clock"></i>
+                            <span data-ru="1000+ лет природной фильтрации" data-ky="1000+ жыл табигый фильтрация">1000+ лет природной фильтрации</span>
+                        </div>
+                        <div class="source-feature">
+                            <i class="fas fa-temperature-low"></i>
+                            <span data-ru="4-6°C температура источника" data-ky="4-6°C булактыn температурасы">4-6°C температура источника</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="Путь воды" data-ky="Суунуn жолу">Путь воды</span>
+                <h2 data-ru="От источника до бутылки" data-ky="Булаkтан бөтөлкөгө чейин">От источника до бутылки</h2>
+            </div>
+            <div class="journey-timeline">
+                <div class="journey-step animate-on-scroll" data-step="1">
+                    <div class="step-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-ru="Добыча" data-ky="Казуu">Добыча</h3>
+                        <p data-ru="Вода добывается из природного источника на высоте 2000 метров" data-ky="Суu 2000 метр бийиктиkтеги табигый булаkтан алынат">Вода добывается из природного источника на высоте 2000 метров</p>
+                    </div>
+                </div>
+                <div class="journey-step animate-on-scroll" data-step="2">
+                    <div class="step-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-ru="Фильтрация" data-ky="Фильтрация">Фильтрация</h3>
+                        <p data-ru="Многоступенчатая система очистки сохраняет природные минералы" data-ky="Көп кадамдуu тазалоо системасы табигый минералдарды сактайт">Многоступенчатая система очистки сохраняет природные минералы</p>
+                    </div>
+                </div>
+                <div class="journey-step animate-on-scroll" data-step="3">
+                    <div class="step-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-ru="Лаборатория" data-ky="Лаборатория">Лаборатория</h3>
+                        <p data-ru="Строгий контроль качества на каждом этапе производства" data-ky="Өндүрүүнүn ар бир этабында сапаттыn катуu көзөmөлү">Строгий контроль качества на каждом этапе производства</p>
+                    </div>
+                </div>
+                <div class="journey-step animate-on-scroll" data-step="4">
+                    <div class="step-icon">
+                        <i class="fas fa-fill-drip"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-ru="Розлив" data-ky="Сатуu">Розлив</h3>
+                        <p data-ru="Автоматизированный процесс розлива в экологичную тару" data-ky="Экологиялыk тарага автоматташтырылган сатуu процесси">Автоматизированный процесс розлива в экологичную тару</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="Преимущества" data-ky="Артыkчылыkтар">Преимущества</span>
+                <h2 data-ru="Почему выбирают Эмел Суу" data-ky="Эмел Суuну эмне үчүн тандашат">Почему выбирают Эмел Суу</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 data-ru="Экологичность" data-ky="Экологиялыkтыгы">Экологичность</h3>
+                        <p data-ru="Добыча из природного источника без химической обработки" data-ky="Химиялыk иштетүүsүз табигый булаkтан алуu">Добыча из природного источника без химической обработки</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 data-ru="Богатый состав" data-ky="Бай курамы">Богатый состав</h3>
+                        <p data-ru="Содержит более 20 полезных минералов и микроэлементов" data-ky="20дон ашыk пайдалуu минералдар жана микроэлементтер">Содержит более 20 полезных минералов и микроэлементов</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 data-ru="Сертификация" data-ky="Сертификация">Сертификация</h3>
+                        <p data-ru="Соответствует международным стандартам качества" data-ky="Эл аралыk сапат стандарттарына дал келеt">Соответствует международным стандартам качества</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 data-ru="Здоровье" data-ky="Ден соолуk">Здоровье</h3>
+                        <p data-ru="Улучшает обмен веществ и укрепляет иммунитет" data-ky="Зат алмашууну жакшыртат жана иммунитетти бекемдейт">Улучшает обмен веществ и укрепляет иммунитет</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quality" class="quality">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="Качество" data-ky="Сапат">Качество</span>
+                <h2 data-ru="Современное производство" data-ky="Заманбаp өндүрүү">Современное производство</h2>
+            </div>
+            <div class="quality-content">
+                <div class="quality-steps">
+                    <div class="quality-step">
+                        <div class="step-background">01</div>
+                        <h3 data-ru="Добыча" data-ky="Казуu">Добыча</h3>
+                        <p data-ru="Бережная добыча воды из природного источника" data-ky="Табигый булаkтан суuну аккураттуu казуu">Бережная добыча воды из природного источника</p>
+                    </div>
+                    <div class="quality-step">
+                        <div class="step-background">02</div>
+                        <h3 data-ru="Фильтрация" data-ky="Фильтрация">Фильтрация</h3>
+                        <p data-ru="Многоступенчатая система очистки" data-ky="Көп кадамдуu тазалоо системасы">Многоступенчатая система очистки</p>
+                    </div>
+                    <div class="quality-step">
+                        <div class="step-background">03</div>
+                        <h3 data-ru="Розлив" data-ky="Сатуu">Розлив</h3>
+                        <p data-ru="Автоматизированный процесс розлива" data-ky="Автоматташтырылган сатуu процесси">Автоматизированный процесс розлива</p>
+                    </div>
+                    <div class="quality-step">
+                        <div class="step-background">04</div>
+                        <h3 data-ru="Контроль" data-ky="Көзөmөл">Контроль</h3>
+                        <p data-ru="Строгий контроль качества на каждом этапе" data-ky="Ар бир этапта сапаттыn катуu көзөmөлү">Строгий контроль качества на каждом этапе</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="Заказ" data-ky="Буйрутma">Заказ</span>
+                <h2 data-ru="Оформить заказ" data-ky="Буйрутma бериңиз">Оформить заказ</h2>
+            </div>
+            <div class="order-content">
+                <div class="order-form-container">
+                    <form class="order-form">
+                        <div class="form-header">
+                            <h3 data-ru="Выберите продукт" data-ky="Продуктту тандаңыз">Выберите продукт</h3>
+                            <div class="product-options">
+                                <div class="product-option">
+                                    <input type="radio" id="product-1" name="product" value="0.5" checked>
+                                    <label for="product-1">
+                                        <span class="product-size">0.5 л</span>
+                                        <span class="product-price">50 сом</span>
+                                    </label>
+                                </div>
+                                <div class="product-option">
+                                    <input type="radio" id="product-2" name="product" value="1">
+                                    <label for="product-2">
+                                        <span class="product-size">1 л</span>
+                                        <span class="product-price">80 сом</span>
+                                    </label>
+                                </div>
+                                <div class="product-option">
+                                    <input type="radio" id="product-3" name="product" value="1.5">
+                                    <label for="product-3">
+                                        <span class="product-size">1.5 л</span>
+                                        <span class="product-price">100 сом</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label for="name" data-ru="Ваше имя" data-ky="Сиздин атыңыз">Ваше имя</label>
+                                <input type="text" id="name" name="name" required data-ru="Введите ваше имя" data-ky="Атыңызды киргизиңиз">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-ru="Телефон" data-ky="Телефон">Телефон</label>
+                                <input type="tel" id="phone" name="phone" required data-ru="+996 (___) ___ __ __" data-ky="+996 (___) ___ __ __">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-ru="Email" data-ky="Email">Email</label>
+                                <input type="email" id="email" name="email" required data-ru="your@email.com" data-ky="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity" data-ru="Количество бутылок" data-ky="Бөтөлкөлөрдүn саны">Количество бутылок</label>
+                                <div class="quantity-selector">
+                                    <button type="button" class="quantity-btn minus">-</button>
+                                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" required>
+                                    <button type="button" class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" data-ru="Адрес доставки" data-ky="Жеткирүү дареги">Адрес доставки</label>
+                                <textarea id="address" name="address" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment" data-ru="Комментарий к заказу" data-ky="Буйрутмага комментарий">Комментарий к заказу</label>
+                                <textarea id="comment" name="comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="order-summary">
+                            <div class="summary-item">
+                                <span data-ru="Товар:" data-ky="Товар:">Товар:</span>
+                                <span id="product-summary">0.5 л x 1 шт.</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-ru="Стоимость:" data-ky="Баасы:">Стоимость:</span>
+                                <span id="price-summary">50 сом</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span data-ru="Итого:" data-ky="Баары:">Итого:</span>
+                                <span id="total-summary">50 сом</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span data-ru="Оформить заказ" data-ky="Буйрутma бериңиз">Оформить заказ</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="order-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-truck"></i> <span data-ru="Доставка" data-ky="Жеткирүү">Доставка</span></h3>
+                        <p data-ru="Бесплатная доставка при заказе от 10 бутылок" data-ky="10 бөтөлкөдөн ашыk буйрутmaда акыsыз жеткирүү">Бесплатная доставка при заказе от 10 бутылок</p>
+                        <div class="delivery-options">
+                            <div class="delivery-option">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-ru="Доставка по Бишкеку" data-ky="Бишкекке жеткирүү">Доставка по Бишкеку</span>
+                            </div>
+                            <div class="delivery-option">
+                                <i class="fas fa-box"></i>
+                                <span data-ru="Самовывоз" data-ky="Өзү алып кетүү">Самовывоз</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-shield-alt"></i> <span data-ru="Гарантии" data-ky="Кепилдиктер">Гарантии</span></h3>
+                        <ul class="guarantees">
+                            <li data-ru="100% натуральная вода" data-ky="100% табигый суu">100% натуральная вода</li>
+                            <li data-ru="Строгий контроль качества" data-ky="Сапаттыn катуu көзөmөлү">Строгий контроль качества</li>
+                            <li data-ru="Быстрая доставка" data-ky="Тез жеткирүү">Быстрая доставка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-ru="Контакты" data-ky="Байланыш">Контакты</span>
+                <h2 data-ru="Свяжитесь с нами" data-ky="Биз менен байланышыңыз">Свяжитесь с нами</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-ru="Телефон" data-ky="Телефон">Телефон</h3>
+                            <p>+996 (772) 777 074</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-ru="Email" data-ky="Email">Email</h3>
+                            <p>emelkgz@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 data-ru="Адрес" data-ky="Дарек">Адрес</h3>
+                            <p data-ru="Ул. Расула Рыспаева, 8/1, с. Кок-Ой, Жумгальский район, Нарынская область" data-ky="Расул Рыспаев көчөсү, 8/1, Кок-Ой айылы, Жумгал району, Нарыn облуsu">Ул. Расула Рыспаева, 8/1, с. Кок-Ой, Жумгальский район, Нарынская область</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.82653870702603!2d74.44278885817536!3d41.88755975639641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3899bb1b90b78d09%3A0x4bddcae9872a25ae!2z0K3QvNC10LstRW1lbA!5e0!3m2!1sru!2sru!4v1746556799732!5m2!1sru!2sru" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Эмел Суу</h3>
+                        <p data-ru="Чистота и здоровье из сердца Кыргызстана" data-ky="Кыргызстандыn жүрөгүнөн тазалыk жана ден соолуk">Чистота и здоровье из сердца Кыргызстана</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4 data-ru="О компании" data-ky="Компания жөнүндө">О компании</h4>
+                            <ul>
+                                <li><a href="#about" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</a></li>
+                                <li><a href="#source" data-ru="Источник" data-ky="Булаk">Источник</a></li>
+                                <li><a href="#quality" data-ru="Качество" data-ky="Сапат">Качество</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 data-ru="Покупателям" data-ky="Сатып алуuчуларга">Покупателям</h4>
+                            <ul>
+                                <li><a href="#benefits" data-ru="Преимущества" data-ky="Артыkчылыkтар">Преимущества</a></li>
+                                <li><a href="#order" data-ru="Заказать" data-ky="Буйрутma">Заказать</a></li>
+                                <li><a href="#contacts" data-ru="Контакты" data-ky="Байланыш">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 data-ru="Контакты" data-ky="Байланыш">Контакты</h4>
+                            <ul class="contact-list">
+                                <li><i class="fas fa-phone"></i> +996 (772) 777 074</li>
+                                <li><i class="fas fa-envelope"></i> emelkgz@gmail.com</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <span data-ru="Нарынская область" data-ky="Нарыn облуsu">Нарынская область</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p data-ru="&copy; 2025 Эмел. Все права защищены." data-ky="&copy; 2024 Эмел Суu. Бардыk укуkтар корголгон.">&copy; 2024 Эмел Суu. Все права защищены.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" data-ru="Политика конфиденциальности" data-ky="Купуялыk саясаты">Политика конфиденциальности</a>
+                        <a href="#" data-ru="Условия использования" data-ky="Колдонуu шарттары">Условия использования</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
