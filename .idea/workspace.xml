@@ -4282,9 +4282,6 @@
       <change beforePath="$PROJECT_DIR$/../client/utils/tasks/checkTasks.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/utils/tasks/renderTasks.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.dockerignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/Dockerfile" beforeDir="false" />
@@ -4367,7 +4364,7 @@
       <workItem from="1750256100773" duration="27000" />
       <workItem from="1750256138594" duration="23000" />
       <workItem from="1750510891896" duration="7447000" />
-      <workItem from="1750524402339" duration="556000" />
+      <workItem from="1750524402339" duration="840000" />
     </task>
     <servers />
   </component>
