@@ -4283,10 +4283,6 @@
       <change beforePath="$PROJECT_DIR$/../client/utils/tasks/renderTasks.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bottle.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bottle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.dockerignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/Dockerfile" beforeDir="false" />
@@ -4308,6 +4304,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -4367,7 +4364,7 @@
       <workItem from="1749893491295" duration="7867000" />
       <workItem from="1750256100773" duration="27000" />
       <workItem from="1750256138594" duration="23000" />
-      <workItem from="1750510891896" duration="3621000" />
+      <workItem from="1750510891896" duration="4260000" />
     </task>
     <servers />
   </component>
