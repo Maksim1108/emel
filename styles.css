@@ -184,6 +184,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('./assets/bg.webp') center;
     background-size: cover;
     position: relative;
