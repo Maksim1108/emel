@@ -34,6 +34,8 @@
     
     <link rel="icon" type="image/png" href="./assets/logo.png">
     <link rel="apple-touch-icon" href="./assets/logo.png">
+    <link rel="preload" href="./assets/bottle.webp" as="image">
+    <link rel="preload" href="./assets/bg.webp" as="image">
     <title data-ru="Эмел Суу | Минеральная вода из Кыргызстана" data-ky="Эмел Суу | Кыргызстандыn минералдыk суuсу">Эмел Суу - Минеральная вода из Кыргызстана</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +56,7 @@
                 <ul class="nav-links">
                     <li><a href="#about" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</a></li>
                     <li><a href="#source" data-ru="Источник" data-ky="Булаk">Источник</a></li>
-                    <li><a href="#benefits" data-ru="Преимущества" data-ky="Артыkчылыkтар">Преимущества</a></li>
+                    <li><a href="#composition" data-ru="Минеральный состав" data-ky="Минералдыk курамы">Минеральный состав</a></li>
                     <li><a href="#quality" data-ru="Качество" data-ky="Сапат">Качество</a></li>
                     <li><a href="#order" data-ru="Заказать" data-ky="Буйрутma">Заказать</a></li>
                     <li><a href="#contacts" data-ru="Контакты" data-ky="Байланыш">Контакты</a></li>
@@ -83,11 +85,12 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <h1 data-ru="Эмел Суу — чистота из недр Кыргызстана" data-ky="Эмел Суу — Кыргызстандыn тереңинен тазалыk">Эмел Суу — чистота из недр Кыргызстана</h1>
-        <p class="subtitle" data-ru="Минеральная вода из сердца Нарынской области" data-ky="Нарыn облусунуn жүрөгүнөн минералдыk суu">Минеральная вода из сердца Нарынской области</p>
+        <p class="subtitle" data-ru="Минеральная вода из сердца Нарынской области" data-ky="Нарыn облуsuнуn жүрөгүнөн минералдыk суu">Минеральная вода из сердца Нарынской области</p>
         <button class="cta-button" onclick="scrollToSection('about')" data-ru="Узнать больше" data-ky="Көбүрөөк билүү">Узнать больше</button>
     </div>
     <div class="bottle-container">
-        <img src="./assets/bottle.webp" alt="Эмел Суу" class="bottle">
+        <img src="./assets/bottle.webp" alt="Эмел Суу" class="bottle"
+             fetchpriority="high" loading="eager" decoding="async">
     </div>
     <div class="scroll-indicator">
         <div class="mouse">
@@ -105,53 +108,37 @@
     <div class="container">
         <div class="section-header">
             <span class="section-subtitle" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</span>
-            <h2 data-ru="Природная сила в каждой капле" data-ky="Ар бир тамчыда табигый күч">Природная сила в каждой капле</h2>
         </div>
-        <div class="about-content">
-            <div class="about-grid">
-                <div class="about-image-wrapper animate-left">
-                    <div class="about-image">
-                        <img src="./assets/bottleonmountains.png" alt="Эмел Суу на фоне гор" class="about-bottle-image">
-                        <div class="quality-badge">
-                            <i class="fas fa-certificate"></i>
-                            <span data-ru="Высшее качество" data-ky="Жогорку сапат">Высшее качество</span>
+        <div class="about-content-new">
+            <div class="about-image-new">
+                <img src="./assets/bottleonmountains.png" alt="Эмел Суу на фоне гор" loading="lazy">
+            </div>
+            <div class="about-text-new">
+                <h2 data-ru="Прикоснитесь к сердцу гор" data-ky="Тоолордун жүрөгүнө тийип коюңуз">Прикоснитесь к сердцу гор</h2>
+                <p data-ru="«Эмел Суу» — это не просто вода. Это дар чистейшей природы Кыргызстана, рожденный на высоте более 2000 метров. Каждый глоток — это путешествие к ледникам Тянь-Шаня, где талая вода проходит многовековую фильтрацию через горные породы, насыщаясь жизненно важными минералами." data-ky="«Эмел Суу» — бул жөн эле суу эмес. Бул 2000 метрден ашыk бийиктиkте жаралган Кыргызстандыn таза жаратылышыныn белеги. Ар бир ууртам — бул Тянь-Шань мөңгүлөрүn саякат, ал жерде эриген суu тоо тектери арkылуu көп кылымдыk чыпкалоодон өтүп, жашоо үчүн маанилүү минералдарга байыйт.">«Эмел Суu» — это не просто вода. Это дар чистейшей природы Кыргызстана, рожденный на высоте более 2000 метров. Каждый глоток — это путешествие к ледникам Тянь-Шаня, где талая вода проходит многовековую фильтрацию через горные породы, насыщаясь жизненно важными минералами.</p>
+                <ul class="about-features">
+                    <li>
+                        <i class="fas fa-mountain"></i>
+                        <div>
+                            <strong data-ru="Высокогорный источник:" data-ky="Бийик тоолуу булаk:">Высокогорный источник:</strong>
+                            <span data-ru="Идеальная чистота и свежесть с высоты 2000м." data-ky="2000м бийиктиkтен идеалдуu тазалыk жана сергектиk.">Идеальная чистота и свежесть с высоты 2000м.</span>
                         </div>
-                    </div>
-                </div>
-                <div class="about-info animate-right">
-                    <div class="about-description">
-                        <p data-ru="Эмел Суу — это уникальная минеральная вода, добываемая в экологически чистом районе Нарынской области на высоте более 2000 метров над уровнем моря. Благодаря естественной фильтрации через горные породы, вода обогащается природными минералами и микроэлементами, сохраняя свою первозданную чистоту и полезные свойства." data-ky="Эмел Суu — Нарыn облуsunун экологиялыk таза аймагында, деңиз деңгээлинен 2000 метрден жогору бийиктиkте казылыp алынган уникалдуu минералдыk суu. Тоо тектери арkылуu табигый фильтрацияныn натыйжасында, суu табигый минералдар жана микроэлементтер менен байып, аныn тазалыгы жана пайдалуu касиеттери сакталат.">Эмел Суу — это уникальная минеральная вода, добываемая в экологически чистом районе Нарынской области на высоте более 2000 метров над уровнем моря. Благодаря естественной фильтрации через горные породы, вода обогащается природными минералами и микроэлементами, сохраняя свою первозданную чистоту и полезные свойства.</p>
-                    </div>
-                    <div class="mineral-composition">
-                        <h3 data-ru="Минеральный состав" data-ky="Минералдыk курамы">Минеральный состав</h3>
-                        <table class="mineral-table">
-                            <thead>
-                                <tr>
-                                    <th>Минерал</th>
-                                    <th>Символ</th>
-                                    <th>Содержание, мг/л</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-ru="Кальций" data-ky="Кальций">Кальций</td>
-                                    <td>Ca</td>
-                                    <td>150-300</td>
-                                </tr>
-                                <tr>
-                                    <td data-ru="Магний" data-ky="Магний">Магний</td>
-                                    <td>Mg</td>
-                                    <td>20-50</td>
-                                </tr>
-                                <tr>
-                                    <td data-ru="Натрий" data-ky="Натрий">Натрий</td>
-                                    <td>Na</td>
-                                    <td>5-15</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <strong data-ru="Природная защита:" data-ky="Табигый коргоо:">Природная защита:</strong>
+                            <span data-ru="Надежно укрыта от любого внешнего воздействия." data-ky="Ар кандай тышkы таасирлерден ишенимдүү корголгон.">Надежно укрыта от любого внешнего воздействия.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-gem"></i>
+                        <div>
+                            <strong data-ru="Уникальный состав:" data-ky="Уникалдуу курамы:">Уникальный состав:</strong>
+                            <span data-ru="Естественное обогащение минералами, а не искусственное." data-ky="Жасалма эмес, табигый минералдар менен байытыlgan.">Естественное обогащение минералами, а не искусственное.</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -172,7 +159,7 @@
                         <div class="feature-content">
                             <h3 data-ru="Высота" data-ky="Бийиктиk">Высота</h3>
                             <span data-ru="2000+ м над уровнем моря" data-ky="2000+ м деңиз деңгээлинен">2000+ м над уровнем моря</span>
-                            <p data-ru="Расположение на большой высоте обеспечивает чистоту и свежесть воды" data-ky="Чоn бийиктиkте жайгашуу суuнуn тазалыгын жана жаңылыгын камсыз кылат">Расположение на большой высоте обеспечивает чистоту и свежесть воды</p>
+                            <p data-ru="Расположение на большой высоте обеспечивает чистоту и свежесть воды" data-ky="Чоn бийиктиkте жайгашуу суuнуn тазалыгын жана жаңылыгыn камсыz кылат">Расположение на большой высоте обеспечивает чистоту и свежесть воды</p>
                         </div>
                     </div>
                     <div class="source-feature">
@@ -200,7 +187,7 @@
 <section id="journey" class="journey">
     <div class="container">
         <div class="section-header">
-            <span class="section-subtitle" data-ru="Путь воды" data-ky="Суунуn жолу">Путь воды</span>
+            <span class="section-subtitle" data-ru="Путь воды" data-ky="Суuнуn жолу">Путь воды</span>
             <h2 data-ru="От источника до бутылки" data-ky="Булаkтан бөтөлкөгө чейин">От источника до бутылки</h2>
         </div>
         <div class="journey-container">
@@ -262,49 +249,47 @@
     </div>
 </section>
 
-<section id="benefits" class="benefits">
+<section id="composition" class="composition">
     <div class="container">
         <div class="section-header">
-            <span class="section-subtitle" data-ru="Преимущества" data-ky="Артыkчылыkтар">Преимущества</span>
-            <h2 data-ru="Почему выбирают Эмел Суу" data-ky="Эмел Суuну эмне үчүн тандашат">Почему выбирают Эмел Суу</h2>
+            <span class="section-subtitle" data-ru="Химический состав" data-ky="Химиялыk курамы">Химический состав</span>
+            <h2 data-ru="Минеральный состав" data-ky="Минералдыk курамы">Минеральный состав</h2>
         </div>
-        <div class="benefits-grid">
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3 data-ru="Экологичность" data-ky="Экологиялыkтыгы">Экологичность</h3>
-                    <p data-ru="Добыча из природного источника без химической обработки" data-ky="Химиялыk иштетүүsүз табигый булаkтан алуu">Добыча из природного источника без химической обработки</p>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3 data-ru="Богатый состав" data-ky="Бай курамы">Богатый состав</h3>
-                    <p data-ru="Содержит более 20 полезных минералов и микроэлементов" data-ky="20дон ашыk пайдалуu минералдар жана микроэлементтер">Содержит более 20 полезных минералов и микроэлементов</p>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3 data-ru="Сертификация" data-ky="Сертификация">Сертификация</h3>
-                    <p data-ru="Соответствует международным стандартам качества" data-ky="Эл аралыk сапат стандарттарына дал келеt">Соответствует международным стандартам качества</p>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3 data-ru="Здоровье" data-ky="Ден соолуk">Здоровье</h3>
-                    <p data-ru="Улучшает обмен веществ и укрепляет иммунитет" data-ky="Зат алмашууну жакшыртат жана иммунитетти бекемдейт">Улучшает обмен веществ и укрепляет иммунитет</p>
-                </div>
-            </div>
+        <div class="composition-content">
+            <table class="mineral-table">
+                <thead>
+                <tr>
+                    <th>Минерал (Символ)</th>
+                    <th>Содержание, мг/л</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-ru="Кальций (Ca)" data-ky="Кальций (Ca)">Кальций (Ca)</td>
+                    <td>150-300</td>
+                </tr>
+                <tr>
+                    <td data-ru="Магний (Mg)" data-ky="Магний (Mg)">Магний (Mg)</td>
+                    <td>20-50</td>
+                </tr>
+                <tr>
+                    <td data-ru="Натрий (Na)" data-ky="Натрий (Na)">Натрий (Na)</td>
+                    <td>5-15</td>
+                </tr>
+                <tr>
+                    <td data-ru="Гидрокарбонаты (HCO3)" data-ky="Гидрокарбонаттар (HCO3)">Гидрокарбонаты (HCO3)</td>
+                    <td>150-300</td>
+                </tr>
+                <tr>
+                    <td data-ru="Сульфаты (SO4)" data-ky="Сульфаттар (SO4)">Сульфаты (SO4)</td>
+                    <td>150-300</td>
+                </tr>
+                <tr>
+                    <td data-ru="Хлориды (Cl)" data-ky="Хлориддер (Cl)">Хлориды (Cl)</td>
+                    <td>50-150</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
