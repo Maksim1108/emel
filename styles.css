@@ -279,7 +279,8 @@ body {
     position: absolute;
     bottom: 0;
     right: 10%;
-    height: 85vh;
+    height: 90%;
+    max-height: 700px;
     transform: translateY(0) perspective(1200px) rotateX(5deg);
     transition: var(--transition-base);
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
@@ -472,61 +473,29 @@ body {
     font-weight: 500;
 }
 
-.mineral-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.mineral-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.mineral-item {
-    text-align: center;
-    padding: 20px;
-    background: var(--light-bg);
-    border-radius: var(--border-radius);
-    transition: var(--transition-base);
+.mineral-table th,
+.mineral-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.mineral-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.mineral-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    color: var(--white);
+.mineral-table th {
+    background-color: #f2f2f2;
     font-weight: 600;
-    font-size: 1.2rem;
 }
 
-.mineral-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.mineral-value {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.mineral-name {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    font-weight: 500;
-}
-
-.mineral-unit {
-    font-size: 0.8rem;
-    color: var(--text-color);
-    opacity: 0.7;
+.mineral-table tr:hover {
+    background-color: #f9f9f9;
 }
 
 /* Animation Classes */
@@ -610,58 +579,29 @@ body {
     font-size: 1.5em;
 }
 
-.mineral-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.mineral-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.mineral-item {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+.mineral-table th,
+.mineral-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.mineral-icon {
-    width: 50px;
-    height: 50px;
-    background: #f0f7ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-}
-
-.mineral-icon span {
-    color: #2196F3;
-    font-size: 1.4em;
+.mineral-table th {
+    background-color: #f2f2f2;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
 }
 
-.mineral-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.mineral-value {
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #333;
-}
-
-.mineral-name {
-    color: #666;
-    font-size: 0.9em;
-}
-
-.mineral-unit {
-    color: #999;
-    font-size: 0.8em;
+.mineral-table tr:hover {
+    background-color: #f9f9f9;
 }
 
 /* Stagger animation delays for mineral items */
@@ -1491,7 +1431,7 @@ footer::before {
 
     .bottle {
         right: 5%;
-        height: 80vh;
+        height: 85%;
     }
 
     .quality-steps {
@@ -1614,7 +1554,9 @@ footer::before {
     .bottle {
         right: 50%;
         transform: translateX(50%);
-        height: 60vh;
+        height: 60%;
+        width: auto;
+        max-height: 400px;
         bottom: 10%;
     }
 
@@ -1674,7 +1616,8 @@ footer::before {
     }
 
     .bottle {
-        height: 50vh;
+        height: 55%;
+        max-height: 350px;
     }
 
     .section-header h2 {
@@ -1728,7 +1671,8 @@ footer::before {
     }
 
     .bottle {
-        height: 40vh;
+        height: 50%;
+        max-height: 300px;
     }
 
     .nav-links a {

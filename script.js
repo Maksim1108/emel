@@ -78,24 +78,6 @@ const Utils = {
         };
     },
 
-    // Троттлинг функция
-    throttle(func, limit) {
-        let inThrottle;
-        return function (...args) {
-            if (!inThrottle) {
-                func.apply(this, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    },
-
-    // Стандартная валидация номера телефона (только цифры и плюс)
-    validatePhoneNumber(input) {
-        const value = input.replace(/\D/g, ''); // Удаляем все нецифровые символы кроме +
-        return value.length >= 10 && value.length <= 15;
-    },
-
     // Очистка ввода от опасных символов
     sanitizeInput(input) {
         return input.replace(/[<>]/g, '').trim();
@@ -181,7 +163,6 @@ class App {
             this.initializeFormValidation();
             this.initializeAnimations();
             this.initializeOrderForm();
-            this.initializeScrollEffects();
             this.initializeNavigation();
         } catch (error) {
             console.error('Initialization error:', error);
@@ -532,29 +513,6 @@ class App {
         }
         if (summaryElements.total) {
             summaryElements.total.textContent = `${total} сом`;
-        }
-    }
-
-    // Инициализация эффектов прокрутки
-    initializeScrollEffects() {
-        const bottle = document.querySelector('.bottle');
-
-        if (bottle) {
-            let lastScrollY = window.scrollY;
-
-            const handleScroll = Utils.throttle(() => {
-                const currentScrollY = window.scrollY;
-                const scrollDiff = currentScrollY - lastScrollY;
-
-                const currentTransform = bottle.style.transform || 'translateY(0px)';
-                const currentY = parseFloat(currentTransform.match(/translateY\(([^)]+)px\)/) || [0, 0])[1];
-                const newY = currentY + scrollDiff * CONFIG.ui.parallaxSpeed;
-
-                bottle.style.transform = `translateY(${newY}px)`;
-                lastScrollY = currentScrollY;
-            }, 16); // 60fps
-
-            window.addEventListener('scroll', handleScroll, {passive: true});
         }
     }
 
