@@ -55,8 +55,8 @@ function validateOrderData(data) {
 
     // Валидация количества
     const quantity = parseInt(data.quantity);
-    if (isNaN(quantity) || quantity < 1 || quantity > 100) {
-        errors.push('Количество должно быть от 1 до 100');
+    if (isNaN(quantity) || quantity < 1) {
+        errors.push('Количество должно быть от 1 ');
     }
 
     // Валидация продукта
