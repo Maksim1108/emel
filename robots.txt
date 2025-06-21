@@ -1,0 +1,10 @@
+# robots.txt for emel.kg
+User-agent: *
+Allow: /
+
+# Запрещаем тех. ресурсы
+Disallow: /assets/
+Disallow: /styles.css
+Disallow: /script.js
+
+Sitemap: https://emel.kg/sitemap.xml

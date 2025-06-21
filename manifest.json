@@ -1,0 +1,32 @@
+{
+    "name": "Эмел - Минеральная вода из Кыргызстана",
+    "short_name": "Эмел",
+    "description": "Натуральная минеральная вода из сердца Нарынской области",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "./assets/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "ru",
+    "dir": "ltr",
+    "orientation": "portrait",
+    "categories": ["aqua", "health", "water"],
+    "screenshots": [
+        {
+            "src": "./assets/bottleonmountains.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        }
+    ]
+} 

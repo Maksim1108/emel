@@ -1,0 +1,11 @@
+/* TEAM */
+Company: Эмел
+Site: https://emel.kg
+Location: Нарынская область, Кыргызстан
+
+/* SITE */
+Last update: 2024/03/07
+Language: Russian / Kyrgyz
+Standards: HTML5, CSS3
+Components: Font Awesome, Google Fonts
+Software: Visual Studio Code 
