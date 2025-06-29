@@ -421,25 +421,25 @@ body {
 /* Анимация для изображения */
 .about-image-new {
     opacity: 0;
-    transform: translateX(-50px) scale(0.9);
-    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50px);
+    transition: all 1s;
     transition-delay: 0.2s;
 }
 
 .about-image-new.animate {
     opacity: 1;
     transform: scale(1);
-    animation: imageSlideIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+    animation: imageSlideIn 1.2s;
 }
 
 @keyframes imageSlideIn {
     0% {
         opacity: 0;
-        transform: translateX(-50px) scale(0.9);
+        transform: translateX(-50px);
     }
     100% {
         opacity: 1;
-        transform: translateX(0) scale(1);
+        transform: translateX(0);
     }
 }
 
