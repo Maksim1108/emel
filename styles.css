@@ -804,15 +804,7 @@ body {
     }
 
     .bottle {
-        animation: none;
-        will-change: auto;
-        transition: none;
-        transform: none;
-    }
-    
-    .bottle:hover {
-        transform: none;
-        animation-play-state: running;
+        display: none;
     }
 
     .about {
@@ -2194,15 +2186,7 @@ footer::before {
     }
 
     .bottle {
-        animation: none;
-        will-change: auto;
-        transition: none;
-        transform: none;
-    }
-    
-    .bottle:hover {
-        transform: none;
-        animation-play-state: running;
+        display: none;
     }
 
     .section-header h2 {
@@ -2348,18 +2332,7 @@ footer::before {
     }
 
     .bottle {
-        height: 70%;
-        bottom: 10%;
-        right: -20%;
-        animation: none !important;
-        will-change: auto !important;
-        transition: none !important;
-        transform: none !important;
-    }
-    
-    .bottle:hover {
-        transform: none !important;
-        animation-play-state: running !important;
+        display: none;
     }
 
     .nav-links a {
