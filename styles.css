@@ -802,6 +802,22 @@ body {
     .health-slogan h3 {
         font-size: 1.6rem;
     }
+
+    .bottle {
+        animation: none;
+        will-change: auto;
+        transition: none;
+        transform: none;
+    }
+    
+    .bottle:hover {
+        transform: none;
+        animation-play-state: running;
+    }
+
+    .about {
+        background-attachment: scroll;
+    }
 }
 
 /* === SOURCE SECTION === */
@@ -2166,8 +2182,7 @@ footer::before {
     }
 
     .nav-links a {
-        font-size: 1.1rem;
-        padding: 12px;
+        font-size: 1.2rem;
     }
 
     .hero h1 {
@@ -2175,11 +2190,19 @@ footer::before {
     }
 
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .bottle {
-        right: -10%;
+        animation: none;
+        will-change: auto;
+        transition: none;
+        transform: none;
+    }
+    
+    .bottle:hover {
+        transform: none;
+        animation-play-state: running;
     }
 
     .section-header h2 {
@@ -2291,6 +2314,10 @@ footer::before {
     .feature-icon {
         align-self: center;
     }
+
+    .about {
+        background-attachment: scroll;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2324,6 +2351,15 @@ footer::before {
         height: 70%;
         bottom: 10%;
         right: -20%;
+        animation: none !important;
+        will-change: auto !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    
+    .bottle:hover {
+        transform: none !important;
+        animation-play-state: running !important;
     }
 
     .nav-links a {
@@ -2380,7 +2416,12 @@ footer::before {
     }
 
     .feature-content span {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Отключаем background-attachment: fixed для мобильных */
+    .about {
+        background-attachment: scroll;
     }
 }
 
@@ -2391,6 +2432,22 @@ footer::before {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+    
+    .bottle {
+        animation: none !important;
+        will-change: auto !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    
+    .bottle:hover {
+        transform: none !important;
+        animation-play-state: running !important;
+    }
+    
+    .about {
+        background-attachment: scroll !important;
     }
 }
 
