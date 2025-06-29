@@ -4284,6 +4284,7 @@
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.dockerignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.gitignore" beforeDir="false" />
@@ -4333,6 +4334,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maksim\Desktop\emel\assets\slider" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -4367,7 +4373,12 @@
       <workItem from="1750256100773" duration="27000" />
       <workItem from="1750256138594" duration="23000" />
       <workItem from="1750510891896" duration="7447000" />
-      <workItem from="1750524402339" duration="6844000" />
+      <workItem from="1750524402339" duration="9351000" />
+      <workItem from="1750767649328" duration="53000" />
+      <workItem from="1750844175868" duration="13000" />
+      <workItem from="1751108694893" duration="5154000" />
+      <workItem from="1751116060903" duration="266000" />
+      <workItem from="1751193129251" duration="9167000" />
     </task>
     <servers />
   </component>

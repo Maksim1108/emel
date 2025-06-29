@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<header class="main-header">
+<header class="main-header transparent">
     <div class="container">
         <div class="header-content">
             <div class="logo">
@@ -57,22 +57,19 @@
                     <li><a href="#about" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</a></li>
                     <li><a href="#source" data-ru="Источник" data-ky="Булаk">Источник</a></li>
                     <li><a href="#composition" data-ru="Минеральный состав" data-ky="Минералдыk курамы">Минеральный состав</a></li>
+                    <li><a href="#gallery" data-ru="Галерея" data-ky="Галерея">Галерея</a></li>
                     <li><a href="#quality" data-ru="Качество" data-ky="Сапат">Качество</a></li>
                     <li><a href="#order" data-ru="Заказать" data-ky="Буйрутma">Заказать</a></li>
                     <li><a href="#contacts" data-ru="Контакты" data-ky="Байланыш">Контакты</a></li>
+                    <li></li>
+                    <li></li>
+                    <div class="language-switcher">
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                        <span>/</span>
+                        <button class="lang-btn" data-lang="ky">KG</button>
+                    </div>
                 </ul>
             </nav>
-            <div class="header-contact">
-                <a href="tel:+996772777074" class="phone-link">
-                    <i class="fas fa-phone"></i>
-                    +996 (772) 777 074
-                </a>
-                <div class="language-switcher">
-                    <button class="lang-btn" data-lang="ru">RU</button>
-                    <span>/</span>
-                    <button class="lang-btn" data-lang="ky">KG</button>
-                </div>
-            </div>
             <button class="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -114,31 +111,17 @@
                 <img src="./assets/bottleonmountains.png" alt="Эмел Суу на фоне гор" loading="lazy">
             </div>
             <div class="about-text-new">
-                <h2 data-ru="Прикоснитесь к сердцу гор" data-ky="Тоолордун жүрөгүнө тийип коюңуз">Прикоснитесь к сердцу гор</h2>
-                <p data-ru="«Эмел Суу» — это не просто вода. Это дар чистейшей природы Кыргызстана, рожденный на высоте более 2000 метров. Каждый глоток — это путешествие к ледникам Тянь-Шаня, где талая вода проходит многовековую фильтрацию через горные породы, насыщаясь жизненно важными минералами." data-ky="«Эмел Суу» — бул жөн эле суу эмес. Бул 2000 метрден ашыk бийиктиkте жаралган Кыргызстандыn таза жаратылышыныn белеги. Ар бир ууртам — бул Тянь-Шань мөңгүлөрүn саякат, ал жерде эриген суu тоо тектери арkылуu көп кылымдыk чыпкалоодон өтүп, жашоо үчүн маанилүү минералдарга байыйт.">«Эмел Суu» — это не просто вода. Это дар чистейшей природы Кыргызстана, рожденный на высоте более 2000 метров. Каждый глоток — это путешествие к ледникам Тянь-Шаня, где талая вода проходит многовековую фильтрацию через горные породы, насыщаясь жизненно важными минералами.</p>
-                <ul class="about-features">
-                    <li>
-                        <i class="fas fa-mountain"></i>
-                        <div>
-                            <strong data-ru="Высокогорный источник:" data-ky="Бийик тоолуу булаk:">Высокогорный источник:</strong>
-                            <span data-ru="Идеальная чистота и свежесть с высоты 2000м." data-ky="2000м бийиктиkтен идеалдуu тазалыk жана сергектиk.">Идеальная чистота и свежесть с высоты 2000м.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-shield-alt"></i>
-                        <div>
-                            <strong data-ru="Природная защита:" data-ky="Табигый коргоо:">Природная защита:</strong>
-                            <span data-ru="Надежно укрыта от любого внешнего воздействия." data-ky="Ар кандай тышkы таасирлерден ишенимдүү корголгон.">Надежно укрыта от любого внешнего воздействия.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-gem"></i>
-                        <div>
-                            <strong data-ru="Уникальный состав:" data-ky="Уникалдуу курамы:">Уникальный состав:</strong>
-                            <span data-ru="Естественное обогащение минералами, а не искусственное." data-ky="Жасалма эмес, табигый минералдар менен байытыlgan.">Естественное обогащение минералами, а не искусственное.</span>
-                        </div>
-                    </li>
-                </ul>
+                <div class="well-info">
+                    <h2 data-ru="Скважина #4737" data-ky="Скважина #4737">Скважина #4737</h2>
+                </div>
+                
+                <div class="health-slogan">
+                    <h3 data-ru="ЗДОРОВЬЕ В КАЖДОЙ КАПЛЕ!" data-ky="ЗДОРОВЬЕ В КАЖДОЙ КАПЛЕ!">ЗДОРОВЬЕ В КАЖДОЙ КАПЛЕ!</h3>
+                </div>
+                
+                <div class="medical-recommendations">
+                    <p data-ru="Рекомендована при заболеваниях органов пищеварения, болезней печени, желчного пузыря, болезней эндокринной системы, расстройствах питания, нарушения обмена веществ и болезней мочеполовой системы" data-ky="Рекомендована при заболеваниях органов пищеварения, болезней печени, желчного пузыря, болезней эндокринной системы, расстройствах питания, нарушения обмена веществ и болезней мочеполовой системы">Рекомендована при заболеваниях органов пищеварения, болезней печени, желчного пузыря, болезней эндокринной системы, расстройствах питания, нарушения обмена веществ и болезней мочеполовой системы</p>
+                </div>
             </div>
         </div>
     </div>
@@ -171,7 +154,7 @@
                         </div>
                     </div>
                     <div class="source-feature">
-                        <i class="fas fa-temperature-low"></i>
+                        <i class="fas fa-thermometer-half"></i>
                         <div class="feature-content">
                             <h3 data-ru="Температура" data-ky="Температура">Температура</h3>
                             <span data-ru="4-6°C температура источника" data-ky="4-6°C булактыn температурасы">4-6°C температура источника</span>
@@ -290,6 +273,48 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle" data-ru="Галерея" data-ky="Галерея">Галерея</span>
+            <h2 data-ru="Наше производство" data-ky="Биздин өндүрүү">Наше производство</h2>
+        </div>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide-wrapper">
+                    <div class="slide prev">
+                        <img src="./assets/slider/6.PNG" alt="Эмел Суу - Производство 6" loading="lazy">
+                        <div class="slide-caption">
+                            <h3 data-ru="Природный источник" data-ky="Табигый булаk">Природный источник</h3>
+                            <p data-ru="Чистая вода из глубин гор" data-ky="Тоолордуn тереңинен таза суu">Чистая вода из глубин гор</p>
+                        </div>
+                    </div>
+                    <div class="slide active">
+                        <img src="./assets/slider/1.PNG" alt="Эмел Суу - Производство 1" loading="lazy">
+                        <div class="slide-caption">
+                            <h3 data-ru="Современное производство" data-ky="Заманбаp өндүрүү">Современное производство</h3>
+                            <p data-ru="Высокие стандарты качества" data-ky="Жогорку сапат стандарттары">Высокие стандарты качества</p>
+                        </div>
+                    </div>
+                    <div class="slide next">
+                        <img src="./assets/slider/2.PNG" alt="Эмел Суу - Производство 2" loading="lazy">
+                        <div class="slide-caption">
+                            <h3 data-ru="Контроль качества" data-ky="Сапаттыn көзөmөлү">Контроль качества</h3>
+                            <p data-ru="Строгий надзор на каждом этапе" data-ky="Ар бир этапта катуu көзөmөл">Строгий надзор на каждом этапе</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow slider-arrow-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow slider-arrow-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 </section>
@@ -496,6 +521,7 @@
                         <ul>
                             <li><a href="#about" data-ru="О продукте" data-ky="Продукт жөнүндө">О продукте</a></li>
                             <li><a href="#source" data-ru="Источник" data-ky="Булаk">Источник</a></li>
+                            <li><a href="#gallery" data-ru="Галерея" data-ky="Галерея">Галерея</a></li>
                             <li><a href="#quality" data-ru="Качество" data-ky="Сапат">Качество</a></li>
                         </ul>
                     </div>
@@ -532,6 +558,19 @@
     }
     setVh();
     window.addEventListener('resize', setVh);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('.main-header');
+        function updateHeader() {
+            if (window.scrollY === 0) {
+                header.classList.add('transparent');
+            } else {
+                header.classList.remove('transparent');
+            }
+        }
+        updateHeader();
+        window.addEventListener('scroll', updateHeader);
+    });
 </script>
 </body>
 </html>

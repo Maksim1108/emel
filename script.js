@@ -22,7 +22,7 @@ const CONFIG = {
     ui: {
         debounceDelay: 300,
         messageTimeout: 5000,
-        headerOffset: 80,
+        headerOffset: 60,
         parallaxSpeed: 0.1
     },
     api: {
@@ -164,6 +164,7 @@ class App {
             this.initializeAnimations();
             this.initializeOrderForm();
             this.initializeNavigation();
+            this.initializeSlider();
         } catch (error) {
             console.error('Initialization error:', error);
             Utils.showMessage(MESSAGES[this.currentLanguage].initError, 'error');
@@ -367,22 +368,90 @@ class App {
 
     // Инициализация анимаций
     initializeAnimations() {
-        // Создаем один observer для всех анимаций
-        const observer = new IntersectionObserver((entries) => {
+        // Создаем Intersection Observer для анимаций
+        const animationObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('animate');
+                    
+                    // Специальная логика для секции about
+                    if (entry.target.classList.contains('about')) {
+                        this.animateAboutSection(entry.target);
+                    }
+                    
+                    // Специальная логика для секции composition (таблица минералов)
+                    if (entry.target.classList.contains('composition')) {
+                        this.animateCompositionTable(entry.target);
+                    }
                 }
             });
-        }, CONFIG.animation);
-
-        // Наблюдаем за всеми анимируемыми элементами
-        document.querySelectorAll('.animate-on-scroll, .animate-item, .animate-left, .animate-right').forEach(element => {
-            observer.observe(element);
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
         });
 
-        this.observers.set('general', observer);
+        // Наблюдаем за секциями с анимациями
+        const animatedSections = document.querySelectorAll('.about, .source, .journey, .composition, .gallery, .quality');
+        animatedSections.forEach(section => {
+            animationObserver.observe(section);
+        });
+
+        // Сохраняем observer для очистки
+        this.observers.set('animation', animationObserver);
+        
+        // Инициализируем таймлайн
         this.initializeTimeline();
+    }
+
+    // Специальная анимация для секции about
+    animateAboutSection(section) {
+        const elements = [
+            section.querySelector('.section-header'),
+            section.querySelector('.about-image-new'),
+            section.querySelector('.about-text-new'),
+            section.querySelector('.well-info'),
+            section.querySelector('.health-slogan'),
+            section.querySelector('.medical-recommendations')
+        ];
+
+        // Добавляем класс animate с задержкой для каждого элемента
+        elements.forEach((element, index) => {
+            if (element) {
+                setTimeout(() => {
+                    element.classList.add('animate');
+                }, index * 200); // 200ms задержка между элементами
+            }
+        });
+
+        // Анимация для feature items если они есть
+        const featureItems = section.querySelectorAll('.feature-item');
+        featureItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('animate');
+            }, 1000 + (index * 150)); // Начинаем после основных элементов
+        });
+    }
+
+    // Специальная анимация для таблицы минерального состава
+    animateCompositionTable(section) {
+        const table = section.querySelector('.mineral-table');
+        if (!table) return;
+
+        // Анимация заголовка таблицы
+        const thead = table.querySelector('thead tr');
+        if (thead) {
+            setTimeout(() => {
+                thead.classList.add('animate');
+            }, 300);
+        }
+
+        // Анимация строк таблицы
+        const tbodyRows = table.querySelectorAll('tbody tr');
+        tbodyRows.forEach((row, index) => {
+            setTimeout(() => {
+                row.classList.add('animate');
+            }, 500 + (index * 150)); // Начинаем после заголовка с задержкой для каждой строки
+        });
     }
 
     // Инициализация таймлайна
@@ -518,6 +587,7 @@ class App {
 
     // Инициализация навигации
     initializeNavigation() {
+        // Плавная прокрутка по якорным ссылкам
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -529,6 +599,176 @@ class App {
                 }
             });
         });
+
+        // Обработка изменения шапки при скролле
+        const header = document.querySelector('.main-header');
+        if (header) {
+            const handleScroll = Utils.debounce(() => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }, 10);
+
+            window.addEventListener('scroll', handleScroll);
+            
+            // Проверяем начальное состояние
+            handleScroll();
+        }
+    }
+
+    // Инициализация слайдера
+    initializeSlider() {
+        const slider = document.querySelector('.slider');
+        const slideWrapper = document.querySelector('.slide-wrapper');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevArrow = document.querySelector('.slider-arrow-prev');
+        const nextArrow = document.querySelector('.slider-arrow-next');
+        
+        if (!slider || slides.length === 0) return;
+
+        // Массив всех изображений
+        const images = [
+            './assets/slider/1.PNG',
+            './assets/slider/2.PNG',
+            './assets/slider/3.PNG',
+            './assets/slider/4.PNG',
+            './assets/slider/5.PNG',
+            './assets/slider/6.PNG'
+        ];
+
+        // Массив подписей для каждого слайда
+        const captions = [
+            {
+                title: { ru: 'Современное производство', ky: 'Заманбаp өндүрүү' },
+                description: { ru: 'Высокие стандарты качества', ky: 'Жогорку сапат стандарттары' }
+            },
+            {
+                title: { ru: 'Контроль качества', ky: 'Сапаттыn көзөmөлү' },
+                description: { ru: 'Строгий надзор на каждом этапе', ky: 'Ар бир этапта катуu көзөmөл' }
+            },
+            {
+                title: { ru: 'Природный источник', ky: 'Табигый булаk' },
+                description: { ru: 'Чистая вода из глубин гор', ky: 'Тоолордуn тереңинен таза суu' }
+            },
+            {
+                title: { ru: 'Автоматизация', ky: 'Автоматташтыруу' },
+                description: { ru: 'Современные технологии розлива', ky: 'Заманбаp сатуu технологиялары' }
+            },
+            {
+                title: { ru: 'Лабораторные испытания', ky: 'Лабораториялыk сыноолор' },
+                description: { ru: 'Регулярные проверки качества', ky: 'Сапаттыn үзгүлтүксүз текшерүүлөрү' }
+            },
+            {
+                title: { ru: 'Экологичность', ky: 'Экологиялыkтыk' },
+                description: { ru: 'Забота об окружающей среде', ky: 'Чөйрөнү коргоо' }
+            }
+        ];
+
+        let currentIndex = 0;
+        let isAnimating = false;
+
+        // Функция для анимированного обновления слайдов
+        const updateSlides = (direction = 'next') => {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            const nextIndex = (currentIndex + 1) % images.length;
+
+            // Добавляем классы анимации
+            if (direction === 'next') {
+                slides[0].classList.add('sliding-left'); // prev уходит влево
+                slides[1].classList.add('sliding-left'); // active уходит влево
+                slides[2].classList.add('sliding-right'); // next уходит вправо
+            } else {
+                slides[0].classList.add('sliding-right'); // prev уходит вправо
+                slides[1].classList.add('sliding-right'); // active уходит вправо
+                slides[2].classList.add('sliding-left'); // next уходит влево
+            }
+
+            // Ждем завершения анимации
+            setTimeout(() => {
+                // Обновляем изображения
+                slides[0].querySelector('img').src = images[prevIndex];
+                slides[1].querySelector('img').src = images[currentIndex];
+                slides[2].querySelector('img').src = images[nextIndex];
+
+                // Обновляем alt атрибуты
+                slides[0].querySelector('img').alt = `Эмел Суу - Производство ${prevIndex + 1}`;
+                slides[1].querySelector('img').alt = `Эмел Суу - Производство ${currentIndex + 1}`;
+                slides[2].querySelector('img').alt = `Эмел Суу - Производство ${nextIndex + 1}`;
+
+                // Обновляем подписи
+                const currentLanguage = Utils.getCurrentLanguage();
+                
+                // Предыдущий слайд
+                const prevCaption = slides[0].querySelector('.slide-caption');
+                if (prevCaption) {
+                    prevCaption.querySelector('h3').textContent = captions[prevIndex].title[currentLanguage];
+                    prevCaption.querySelector('p').textContent = captions[prevIndex].description[currentLanguage];
+                }
+
+                // Активный слайд
+                const activeCaption = slides[1].querySelector('.slide-caption');
+                if (activeCaption) {
+                    activeCaption.querySelector('h3').textContent = captions[currentIndex].title[currentLanguage];
+                    activeCaption.querySelector('p').textContent = captions[currentIndex].description[currentLanguage];
+                }
+
+                // Следующий слайд
+                const nextCaption = slides[2].querySelector('.slide-caption');
+                if (nextCaption) {
+                    nextCaption.querySelector('h3').textContent = captions[nextIndex].title[currentLanguage];
+                    nextCaption.querySelector('p').textContent = captions[nextIndex].description[currentLanguage];
+                }
+
+                // Убираем классы анимации
+                slides.forEach(slide => {
+                    slide.classList.remove('sliding-left', 'sliding-right');
+                });
+
+                // Обновляем точки (только для отображения текущего слайда)
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+
+                isAnimating = false;
+            }, 300); // Половина времени transition для плавности
+        };
+
+        // Функция для перехода к следующему слайду
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateSlides('next');
+        };
+
+        // Функция для перехода к предыдущему слайду
+        const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateSlides('prev');
+        };
+
+        // Обработчики событий для стрелок
+        if (prevArrow) {
+            prevArrow.addEventListener('click', () => {
+                prevSlide();
+            });
+        }
+
+        if (nextArrow) {
+            nextArrow.addEventListener('click', () => {
+                nextSlide();
+            });
+        }
+
+        // Инициализируем первый слайд
+        updateSlides();
     }
 
     // Очистка ресурсов
