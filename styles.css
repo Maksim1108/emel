@@ -1993,7 +1993,7 @@ footer::before {
 
 @media (max-width: 1024px) {
     .hero {
-        min-height: 645px !important;
+        min-height: 662px !important;
         padding: 60px 20px;
     }
 }
